@@ -4,9 +4,10 @@ import { RouterModule } from '@angular/router';
 import { storeFeatureGameDetailRoutes } from './lib.routes';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  imports: [CommonModule, MatCardModule, RouterModule.forChild(storeFeatureGameDetailRoutes)],
+  imports: [CommonModule, MatCardModule,MatButtonModule, RouterModule.forChild(storeFeatureGameDetailRoutes)],
   declarations: [GameDetailComponent],
 })
 export class StoreFeatureGameDetailModule {}
