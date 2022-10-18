@@ -6,7 +6,7 @@ import { UtilLibGeneratorSchema } from './schema';
 
 describe('util-lib generator', () => {
   let appTree: Tree;
-  const options: UtilLibGeneratorSchema = { name: 'test' };
+  const options: UtilLibGeneratorSchema = { name: 'foo', directory: 'store' };
 
   beforeEach(() => {
     appTree = createTreeWithEmptyWorkspace();
@@ -14,7 +14,8 @@ describe('util-lib generator', () => {
 
   it('should run successfully', async () => {
     await generator(appTree, options);
-    const config = readProjectConfiguration(appTree, 'test');
+    const config = readProjectConfiguration(appTree, 'store-util-foo');
     expect(config).toBeDefined();
+    expect(config.tags).toEqual(['type:util', 'scope:store']);
   });
 });
