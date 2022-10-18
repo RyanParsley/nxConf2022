@@ -20,6 +20,19 @@
           "optimization": true,
           "extractLicenses": true,
           "inspect": false,
+          "externalDependencies": [
+            "@nestjs/microservices",
+            "@nestjs/microservices/microservices-module",
+            "@nestjs/websockets/socket-module",
+            "class-transformer",
+            "class-validator",
+            "cache-manager",
+            "cache-manager/package.json"
+          ],
+          "assets": [
+            "apps/api/src/assets",
+            { "glob": "Dockerfile", "input": "apps/api", "output": "." }
+          ],
           "fileReplacements": [
             {
               "replace": "apps/api/src/environments/environment.ts",
