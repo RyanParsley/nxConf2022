@@ -87,6 +87,14 @@
       "cli": "nx",
       "package": "@nrwl/nx-workshop",
       "name": "complete-lab-11"
+    },
+    {
+      "version": "0.1.12",
+      "description": "Complete Lab 12",
+      "factory": "./src/migrations/complete-lab-12/complete-lab-12",
+      "cli": "nx",
+      "package": "@nrwl/nx-workshop",
+      "name": "complete-lab-12"
     }
   ]
 }
