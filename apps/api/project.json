@@ -15,6 +15,7 @@
         "tsConfig": "apps/api/tsconfig.app.json",
         "assets": ["apps/api/src/assets"]
       },
+      "defaultConfiguration": "production",
       "configurations": {
         "production": {
           "optimization": true,
