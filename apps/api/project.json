@@ -42,6 +42,17 @@
         }
       }
     },
+    "deploy": {
+      "executor": "@bg-hoard/internal-plugin:heroku-deploy",
+      "outputs": [],
+      "options": {
+        "distLocation": "dist/apps/api",
+        "herokuAppName": "silly-banana-grabbin"
+      },
+      "dependsOn": [
+        { "target": "build", "projects": "self", "params": "forward" }
+      ]
+    },
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
